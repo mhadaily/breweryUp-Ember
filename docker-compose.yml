@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  dev:
+    container_name: breweryup
+    build: .
+    command: ember server --watcher polling
+    # Keep the stdin open, so we can attach to our app container's process
+    # and do things such as debugging, etc:
+    stdin_open: true
+    # Enable sending signals (CTRL+C, CTRL+P + CTRL+Q) into the container:
+    tty: true
+    ports:
+      - 4210:4200
+      - 49152:49152
+    privileged: true
+    volumes:
+       - .:/home/breweryup/src

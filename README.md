@@ -3,6 +3,18 @@
 This is a single page application based on brewerydb.com api. 
 More details will be provided soon. 
 
+## Docker
+
+* Run build and up: `docker-compose up`, then you are ready to use `http://localhost:4210`
+
+if watchman is running out of resources trying to track all the files in a large ember app. To increase the fs.inotify.max_user_watches count to something that is more appropriate for an ember app, stop your docker-compose server by hitting ctrl-c (or docker-compose stop server if necessary) then execute the following command:
+````commandline
+docker run --rm --privileged --entrypoint sysctl breweryupember_dev -w fs.inotify.max_user_watches=524288
+````
+your app folder is mounted to docker container so you can easily start developing. 
+
+Alternatively, if you are willing to run on your local machine just follow the steps below:
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -12,11 +24,12 @@ You will need the following things properly installed on your computer.
 * [Bower](https://bower.io/)
 * [Ember CLI](https://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
+* [watchman](https://facebook.github.io/watchman/docs/install.html)
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd brewery-up-ember`
+* `cd breweryUp-ember`
 * `npm install`
 * `bower install`
 
