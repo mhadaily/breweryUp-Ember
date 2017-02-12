@@ -1,4 +1,11 @@
 
-{{model.breweries.id}}
-{{model.breweries.name}}
+{{model.id}}
+{{model.name}}
+{{model.description}}
 {{outlet}}
+
+
+<hr>
+{{#link-to "beer" model}}
+  back to {{model.name}}
+{{/link-to}}

@@ -1,8 +1,23 @@
 {{model.name}}
-
-{{#link-to "brewery" model.breweries}}
+<hr>
+{{#link-to "breweries" model}}
 brewey info
 {{/link-to}}
 
+<hr>
+{{#link-to "events" model}}
+  events info
+{{/link-to}}
+<hr>
+
+{{#link-to "ingredients" model}}
+  ingredients info
+{{/link-to}}
+<hr>
+
+{{#link-to "yeasts" model}}
+  yeasts info
+{{/link-to}}
+<hr>
 
 {{outlet}}
