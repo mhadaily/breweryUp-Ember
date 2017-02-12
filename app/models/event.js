@@ -4,5 +4,7 @@ export default DS.Model.extend({
   updateDate: DS.attr(),
   description: DS.attr(),
   createDate: DS.attr(),
-  name: DS.attr()
+  name: DS.attr(),
+  beer: DS.belongsTo(),
+
 });
