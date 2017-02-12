@@ -7,9 +7,9 @@ Beers
 {{else}}
   <ol>
     {{#each model as |beer|}}
-      <li>{{!--#link-to "beer"--}}
+      <li>{{#link-to "beer" beer}}
         {{beer.name}}
-      {{!--/link-to--}}</li>
+      {{/link-to}}</li>
     {{/each}}
   </ol>
 {{/if}}
