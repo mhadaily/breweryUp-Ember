@@ -23,7 +23,7 @@ module.exports = function(environment) {
     }
   };
 
-  ENV.apiHost = process.env.API_HOST || 'qwecpdq39l.execute-api.us-west-1.amazonaws.com';
+  ENV.apiHost = process.env.API_HOST || '2wb03ukih6.execute-api.us-west-1.amazonaws.com';
   //ENV.apiPort = process.env.API_PORT ? ':' + process.env.API_PORT : '';
   ENV.apiUrl = process.env.API_URL || `https://${ENV.apiHost}`;
 

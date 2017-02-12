@@ -11,5 +11,5 @@ export default DS.Model.extend({
   isOrganic: DS.attr(),
   website: DS.attr(),
   status: DS.attr(),
-  statusDisplay: DS.attr()
+  statusDisplay: DS.attr(),
 });
