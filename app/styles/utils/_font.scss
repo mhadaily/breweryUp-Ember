@@ -1,0 +1,11 @@
+.font__weight {
+  &-light {
+    font-weight: $font-weight-light;
+  }
+  &-regular {
+    font-weight: $font-weight-regular;
+  }
+  &font-weight-bold {
+    font-weight: $font-weight-bold;
+  }
+}
