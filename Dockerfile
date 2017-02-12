@@ -42,8 +42,8 @@ RUN chown -R ember:ember $HOME $HOME/* /usr/local/
 USER ember
 
 # ember server on port 4200
-# livereload server on port 49152
-EXPOSE 4200 49152
+# livereload server on port 49153
+EXPOSE 4200 49153
 
 # run ember server on container start
 CMD ["ember", "server"]

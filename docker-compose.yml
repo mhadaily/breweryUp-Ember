@@ -11,8 +11,8 @@ services:
     # Enable sending signals (CTRL+C, CTRL+P + CTRL+Q) into the container:
     tty: true
     ports:
-      - 4210:4200
-      - 49152:49152
+      - 4200:4200
+      - 49153:49153
     privileged: true
     volumes:
        - .:/home/breweryup/src
