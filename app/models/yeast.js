@@ -16,5 +16,7 @@ export default DS.Model.extend({
   category: DS.attr(),
   categoryDisplay: DS.attr(),
   createDate: DS.attr(),
-  updateDate: DS.attr()
+  updateDate: DS.attr(),
+  beer: DS.belongsTo(),
+
 });
