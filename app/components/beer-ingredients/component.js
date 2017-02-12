@@ -7,7 +7,7 @@ export default Ember.Component.extend({
 
   didInsertElement(){
     let beerID = this.get('beerId');
-    let url = `${config.apiUrl}/v2/beers/${beerID}/events`;
+    let url = `${config.apiUrl}/v2/beers/${beerID}/ingredients`;
     return new Ember.RSVP.Promise((resolve, reject) => {
       Ember.$.ajax(url)
         .then(response => {
