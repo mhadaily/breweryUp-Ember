@@ -1,2 +1,17 @@
+Beers
+
+{{#if model.loading}}
+  loading
+
+
+{{else}}
+  <ol>
+    {{#each model as |beer|}}
+      <li>{{!--#link-to "beer"--}}
+        {{beer.name}}
+      {{!--/link-to--}}</li>
+    {{/each}}
+  </ol>
+{{/if}}
+
 {{outlet}}
-List of beers
