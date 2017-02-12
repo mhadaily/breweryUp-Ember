@@ -63,3 +63,8 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+
+#TOO BAD
+
+We don't currently support any type of AJAX calls or JSONP to the API for security reasons. You'd have to expose your API key to the public in your JS and that wouldn't be good.  Steve's recommendation to proxy your AJAX calls through your server is the one we also suggest.
