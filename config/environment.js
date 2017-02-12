@@ -23,6 +23,11 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.apiHost = process.env.API_HOST || 'http//api.brewerydb.com';
+  //ENV.apiPort = process.env.API_PORT ? ':' + process.env.API_PORT : '';
+  ENV.apiKey = process.env.API_KEY || 'eb12dc745460959fe4403f8fc2e114c5';
+  ENV.apiUrl = process.env.API_URL || `${ENV.apiHost}`;
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -43,6 +48,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+
 
   }
 
