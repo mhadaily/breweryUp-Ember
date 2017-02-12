@@ -14,5 +14,7 @@ export default DS.Model.extend({
   ogMin: DS.attr(),
   abvMin: DS.attr(),
   name: DS.attr(),
-  categoryId: DS.attr()
+  categoryId: DS.attr(),
+  beer: DS.belongsTo(),
+
 });
