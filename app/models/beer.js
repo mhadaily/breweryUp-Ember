@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  style: DS.hasMany('style'),
-  glass: DS.hasMany('glass'),
+  styles: DS.attr(),
+  glasses: DS.attr(),
   labels: DS.attr(),
   available: DS.attr(),
   status: DS.attr(),
@@ -18,7 +18,6 @@ export default DS.Model.extend({
   abv: DS.attr(),
   year: DS.attr(),
   name: DS.attr(),
-  id: DS.attr(),
   originalGravity: DS.attr(),
   styleId: DS.attr(),
   ibu: DS.attr(),
