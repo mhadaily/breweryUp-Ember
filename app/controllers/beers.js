@@ -9,22 +9,20 @@ export default Ember.Controller.extend({
   actions: {
     prev(){
       let page = this.get('page');
-      let newPage = page - 1;
+      let newPage = parseInt(page - 1);
       if (newPage < 1) {
         alert('Page number must be greater or equal than 1');
         return;
       }
       this.set('page', newPage);
-
     },
     next(){
       let page = this.get('page');
-      let newPage = page + 1;
-      if (newPage > 60877) {
-        alert('Page number must be less or equal than 60877');
-        return
-      }
+      let newPage = parseInt(page + 1);
       this.set('page', newPage);
+    },
+    updateValue(value){
+      this.set('page', value);
     }
   }
 });
