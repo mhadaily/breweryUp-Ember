@@ -3,10 +3,11 @@
   <div class="row">
     <div class="col-12">
       <div class="text__align-center search">
-          <h4>Which page you like to check? we have {{total_pages}} pages:</h4>
-          <a {{action 'prev'}} class="button__general button__general-style2">PREVIOUS</a>
-          {{input type="text" value=page id="pageNumber" class="search__input text_align-center" placeholder="Current Page"}}
-          <a {{action 'next'}} class="button__general button__general-style2">NEXT</a>
+        <h4>Which page you like to check? we have {{total_pages}} pages:</h4>
+        <a {{action 'prev'}} class="button__general button__general-style2">PREVIOUS</a>
+        {{input type="text" value=page id="pageNumber" class="search__input text_align-center"
+                placeholder="Current Page"}}
+        <a {{action 'next'}} class="button__general button__general-style2">NEXT</a>
       </div>
       <div class="space__height-10"></div>
       {{#if model.loading}}
@@ -16,10 +17,35 @@
         </div>
       {{else}}
         {{#each model as |beer|}}
-          <div class="col-3">
-            {{#link-to "beer" beer}}
-              {{beer.name}}
-            {{/link-to}}
+          <div class="col-4">
+            <div class="beerbox">
+              <div class="flip-container">
+                <div class="flipper">
+                  <div class="front text__align-center">
+                    <div class="beerbox__header">
+                      <h3 class="font__color-yellow">{{beer.name}}</h3>
+                      <p class="font__color-white">Create: {{moment-format beer.createDate 'DD MMM YYYY hh:mm'}}
+                        <br>Update: {{moment-format beer.updateDate 'DD MMM YYYY hh:mm'}}</p>
+                      <p class="font__color-yellow">READ MORE</p>
+                    </div>
+                  </div>
+                  <div class="back beerbox__footer">
+                    <div class="text__align-center">
+                      <p class="font__color-white">abv: {{beer.abv}}<br>
+                      Serving: {{beer.servingTemperature}}<br>
+                      Organic: {{beer.isOrganic}}<br>
+                      status: {{beer.status}}<br>
+                      </p>
+
+                      {{#link-to "beer" beer}}
+                        SEE DETAILS
+                      {{/link-to}}
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         {{/each}}
       {{/if}}

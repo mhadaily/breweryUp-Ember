@@ -1,17 +1,18 @@
 .search {
-  background:#f1f1f1;
-  padding:1em 0 3em;
-  .search__input{
-    border:3px solid $yellowish;
-    padding:17px;
+  background: #f1f1f1;
+  padding: 1em 0 3em;
+  .search__input {
+    border: 3px solid $yellowish;
+    padding: 17px;
+    @extend .text__align-center;
   }
   @media screen and (max-width: 768px) {
-    .search__input{
-      padding:5px;
+    .search__input {
+      padding: 5px;
       width: 15%;
     }
-    .button__general{
-      padding:5px;
+    .button__general {
+      padding: 5px;
     }
   }
 }
