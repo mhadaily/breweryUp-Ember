@@ -2,8 +2,18 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+      <div class="text__align-center search">
+          <h4>Which page you like to check? we have {{total_pages}} pages:</h4>
+          <a {{action 'prev'}} class="button__general button__general-style2">PREVIOUS</a>
+          {{input type="text" value=page id="pageNumber" class="search__input text_align-center" placeholder="Current Page"}}
+          <a {{action 'next'}} class="button__general button__general-style2">NEXT</a>
+      </div>
+      <div class="space__height-10"></div>
       {{#if model.loading}}
-        loading
+        <div class="text__align-center">
+          <div class="space__height-10"></div>
+          {{loading-spinner}}
+        </div>
       {{else}}
         {{#each model as |beer|}}
           <div class="col-3">

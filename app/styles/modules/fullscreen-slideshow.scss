@@ -3,9 +3,9 @@
   h1 {
     font-size: 5em;
   }
-  @media only screen and (max-width: 40em) {
+  @media only screen and (max-width: 768px) {
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   }
 }
