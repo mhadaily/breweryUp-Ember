@@ -9,3 +9,19 @@
     font-weight: $font-weight-bold;
   }
 }
+
+.font__family {
+  &-fantasy {
+    font-family: $font-family-fantasy;
+  }
+  &-normal {
+    font-family: $font-family;
+  }
+}
+
+
+.font__color{
+  &-white{
+    color:#fff;
+  }
+}
