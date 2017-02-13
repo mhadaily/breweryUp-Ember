@@ -1,17 +1,18 @@
-Beers
+<div class="container">
+  <div class="row">
 
-{{#if model.loading}}
-  loading
+    {{#if model.loading}}
+      loading
+    {{else}}
+      <ol>
+        {{#each model as |beer|}}
+          <li>{{#link-to "beer" beer}}
+            {{beer.name}}
+          {{/link-to}}</li>
+        {{/each}}
+      </ol>
+    {{/if}}
 
-
-{{else}}
-  <ol>
-    {{#each model as |beer|}}
-      <li>{{#link-to "beer" beer}}
-        {{beer.name}}
-      {{/link-to}}</li>
-    {{/each}}
-  </ol>
-{{/if}}
-
-{{outlet}}
+    {{outlet}}
+  </div>
+</div>

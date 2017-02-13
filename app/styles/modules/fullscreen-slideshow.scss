@@ -1,0 +1,33 @@
+.fullscreen-slideshow {
+  position: relative;
+  h1 {
+    font-size: 5em;
+  }
+  @media only screen and (max-width: 40em) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.backstretch {
+  position: relative;
+  float: left;
+  cursor: pointer;
+  img {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #616671;
+    opacity: 0.2;
+  }
+}
