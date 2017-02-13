@@ -1,6 +1,10 @@
 .top-menu {
   background: rgba(0, 0, 0, 0.5);
   margin-top: 3em;
+  &.bg{
+    margin-top: 0;
+    background:#000;
+  }
   .logo {
     color: #000;
     float: left;

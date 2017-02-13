@@ -7,7 +7,7 @@
       <ol>
         {{#each model as |beer|}}
           <li>{{#link-to "beer" beer}}
-            {{beer.name}}
+            {{beer.labels.large}}
           {{/link-to}}</li>
         {{/each}}
       </ol>

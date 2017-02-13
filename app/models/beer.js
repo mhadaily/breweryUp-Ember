@@ -1,8 +1,9 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  styles: DS.attr(),
-  glasses: DS.attr(),
+  style: DS.attr(),
+  glass: DS.attr(),
   labels: DS.attr(),
   available: DS.attr(),
   status: DS.attr(),
@@ -24,8 +25,8 @@ export default DS.Model.extend({
   glasswareId: DS.attr(),
   isOrganic: DS.attr(),
   createDate: DS.attr(),
-  breweries: DS.hasMany(),
-  events: DS.hasMany(),
-  ingredients: DS.hasMany(),
-  yeasts: DS.hasMany()
+//breweries: DS.hasMany(),
+//events: DS.hasMany(),
+//ingredients: DS.hasMany(),
+//yeasts: DS.hasMany()
 });
