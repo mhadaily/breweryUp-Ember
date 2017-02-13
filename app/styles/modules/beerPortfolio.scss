@@ -1,0 +1,29 @@
+.beer-portfolio {
+
+  &__details {
+    background-color: #ebedf0;
+    border: 1px solid #d2dae6;
+    padding: 1em 2em;
+    strong {
+      text-transform: uppercase;
+    }
+    &-description {
+      font-size: 90%;
+      padding: 10px;
+      background-color: darken(#ebedf0, 5%);
+      strong {
+        text-transform: uppercase;
+      }
+    }
+    &-detail {
+      strong {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__thumbnail {
+
+  }
+
+}

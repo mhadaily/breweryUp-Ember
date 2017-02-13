@@ -11,7 +11,11 @@ export default Ember.Component.extend({
     return new Ember.RSVP.Promise((resolve, reject) => {
       Ember.$.ajax(url)
         .then(response => {
-          this.set('content', response.data[0]);
+          if (response.data) {
+            this.set('content', response.data[0]);
+          } else {
+            this.set('content', {noData: 'THERE IS NO DATA AVAILABLE'});
+          }
         })
         .catch(e => reject(e));
     });

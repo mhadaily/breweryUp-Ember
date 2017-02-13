@@ -1,13 +1,18 @@
 {{page-header subTitle=model.name title="AWAREDED EVENTS"}}
+<div class="space__height-10"></div>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      {{beer-event beerId=model.id}}
+      {{beer-event beerId=model.id name=model.name}}
       {{outlet}}
-      {{#link-to "beer" model}}
-        back to {{model.name}}
-      {{/link-to}}
+      <div class="space__height-10"></div>
+      <div class="text__align-center">
+        {{#link-to "beer" model class="button__general button__general-style3"}}
+          back to {{model.name}}
+        {{/link-to}}
+      </div>
     </div>
   </div>
 </div>
+<div class="space__height-10"></div>
 {{app-footer}}

@@ -24,6 +24,7 @@ export default DS.Model.extend({
   glasswareId: DS.attr(),
   isOrganic: DS.attr(),
   createDate: DS.attr(),
+  description: DS.attr()
 //breweries: DS.hasMany(),
 //events: DS.hasMany(),
 //ingredients: DS.hasMany(),

@@ -1,8 +1,36 @@
-{{yield}}
-{{beerId}}
-<ul>
-  {{#each-in content as |k v|}}
-    <li>{{k}}: {{v}}</li>
-  {{/each-in}}
-</ul>
-
+{{#if content}}
+  {{#if content.noData}}
+    <h1 class="text__align-center">{{content.noData}}</h1>
+  {{else}}
+    <div class="row">
+      <div class="col-12 clearfix">
+        <h3 class="text__align-center">{{name}} : Yeast</h3>
+        <div class="col-6">
+          <div class="beer-portfolio__details clearfix">
+            <p><strong>category: </strong>{{content.name}}</p>
+            <p><strong>name:</strong> {{content.name}}</p>
+            <p><strong>yeastType:</strong> {{content.yeastType}}</p>
+            <p><strong>attenuationMin:</strong> {{content.attenuationMin}}</p>
+            <p><strong>attenuationMax:</strong> {{content.attenuationMax}}</p>
+            <p><strong>fermentTempMin:</strong> {{content.fermentTempMin}}</p>
+            <p><strong>fermentTempMax:</strong> {{content.fermentTempMax}}</p>
+            <p><strong>alcoholToleranceMin:</strong> {{content.alcoholToleranceMin}}</p>
+            <p><strong>alcoholToleranceMax:</strong> {{content.alcoholToleranceMax}}</p>
+            <p><strong>alcoholToleranceMax:</strong> {{content.alcoholToleranceMax}}</p>
+            <p><strong>productId:</strong> {{content.productId}}</p>
+            <p><strong>supplier:</strong> {{content.supplier}}</p>
+            <p><strong>yeastFormat:</strong> {{content.yeastFormat}}</p>
+            <p><strong>category:</strong> {{content.category}}</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="beer-portfolio__details-description">
+            <p><strong>description:</strong> {{content.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+{{else}}
+  <h1 class="text__align-center">SEARCHING FOR DATA...</h1>
+{{/if}}

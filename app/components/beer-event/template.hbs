@@ -1,8 +1,27 @@
-{{yield}}
-{{beerId}}
-<ul>
-  {{#each-in content as |k v|}}
-    <li>{{k}}: {{v}}</li>
-  {{/each-in}}
-</ul>
+{{#if content}}
+  {{#if content.noData}}
+    <h1 class="text__align-center">{{content.noData}}</h1>
+  {{else}}
+    <div class="row">
+      <div class="col-12 clearfix">
+        <h3 class="text__align-center">{{name}} : Awarded Event</h3>
+        <div class="col-6">
+          <div class="beer-portfolio__details clearfix">
+            <p><strong>name: </strong>{{content.name}}</p>
+            <p><strong>createDate:</strong> {{content.createDate}}</p>
+            <p><strong>updateDate:</strong> {{content.updateDate}}</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="beer-portfolio__details-description">
+            <p><strong>description:</strong> {{content.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+{{else}}
+  <h1 class="text__align-center">SEARCHING FOR DATA...</h1>
+{{/if}}
+
 

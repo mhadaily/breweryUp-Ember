@@ -13,6 +13,8 @@ export default Ember.Component.extend({
         .then(response => {
           if (response.data) {
             this.set('content', response.data[0]);
+          } else {
+            this.set('content', {noData: 'THERE IS NO DATA AVAILABLE'});
           }
         })
         .catch(e => reject(e));
