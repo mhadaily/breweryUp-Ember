@@ -1,18 +1,19 @@
+{{page-header title="COOOOOOL BEERS" subTitle="let's explor some cools beers"}}
 <div class="container">
   <div class="row">
-
-    {{#if model.loading}}
-      loading
-    {{else}}
-      <ol>
+    <div class="col-12">
+      {{#if model.loading}}
+        loading
+      {{else}}
         {{#each model as |beer|}}
-          <li>{{#link-to "beer" beer}}
-            {{beer.labels.large}}
-          {{/link-to}}</li>
+          <div class="col-3">
+            {{#link-to "beer" beer}}
+              {{beer.name}}
+            {{/link-to}}
+          </div>
         {{/each}}
-      </ol>
-    {{/if}}
-
-    {{outlet}}
+      {{/if}}
+      {{outlet}}
+    </div>
   </div>
 </div>

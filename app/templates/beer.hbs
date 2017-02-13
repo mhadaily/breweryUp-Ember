@@ -1,23 +1,30 @@
-{{model.name}}
-<hr>
-{{#link-to "breweries" model}}
-brewey info
-{{/link-to}}
+{{page-header title=model.name subTitle="COOL, I WANT IT!!!"}}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      {{#link-to "breweries" model}}
+        brewey info
+      {{/link-to}}
 
-<hr>
-{{#link-to "events" model}}
-  events info
-{{/link-to}}
-<hr>
+      <hr>
+      {{#link-to "events" model}}
+        events info
+      {{/link-to}}
+      <hr>
 
-{{#link-to "ingredients" model}}
-  ingredients info
-{{/link-to}}
-<hr>
+      {{#link-to "ingredients" model}}
+        ingredients info
+      {{/link-to}}
+      <hr>
 
-{{#link-to "yeasts" model}}
-  yeasts info
-{{/link-to}}
-<hr>
+      {{#link-to "yeasts" model}}
+        yeasts info
+      {{/link-to}}
+      <hr>
 
-{{outlet}}
+      {{outlet}}
+    </div>
+  </div>
+</div>
+
+

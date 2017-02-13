@@ -1,6 +1,12 @@
-{{outlet}}
-{{beer-brewey beerId=model.id}}
-
-{{#link-to "beer" model}}
-  back to {{model.name}}
-{{/link-to}}
+{{page-header subTitle=model.name title="ALL ABOUT BREWERY"}}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      {{beer-brewey beerId=model.id}}
+      {{outlet}}
+      {{#link-to "beer" model}}
+        back to {{model.name}}
+      {{/link-to}}
+    </div>
+  </div>
+</div>

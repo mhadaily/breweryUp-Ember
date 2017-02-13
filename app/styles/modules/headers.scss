@@ -1,0 +1,12 @@
+.headers {
+  background: url('img/header-bg.jpg');
+  padding: 4em 0;
+  color: #fff;
+  @extend .text__align-center;
+  &__title {
+    @extend .font__color-yellow;
+  }
+  &__subtitle {
+    @extend .font__weight-light;
+  }
+}

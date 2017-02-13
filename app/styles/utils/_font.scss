@@ -19,9 +19,14 @@
   }
 }
 
-
-.font__color{
-  &-white{
-    color:#fff;
+.font__color {
+  &-white {
+    color: #fff;
+  }
+  &-yellow {
+    color: $yellowish;
+  }
+  &-gray {
+  color: darken(#fff, 30%);
   }
 }
