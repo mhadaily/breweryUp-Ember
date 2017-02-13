@@ -3,6 +3,8 @@
 This is a single page application based on brewerydb.com api. 
 More details will be provided soon. [READL DEMO ON AMAZON S3](http://brewery-up-ember.s3-website-eu-west-1.amazonaws.com/)
 
+##### Note: Please review MySolution section down below. and check out the server repository. 
+
 ## Docker
 
 * Run build and up: `docker-compose up`, then you are ready to use `http://localhost:4210`
@@ -28,25 +30,14 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:mhadaily/breweryUp-Ember.git` this repository
 * `cd breweryUp-ember`
-* `npm install`
-* `bower install`
+* `npm install` or `yarn install`
 
 ## Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## TODO
-
-**RESTSerializer**
-
-The serializer in Ember for Beers only is done which is I need to complete and demonstrate this project.
-However, I still need to work on `hasMany` and `belongsTo` for other models. 
-Although I have partially done that, still need refinement until 100% ready. 
-For now, I will finish project with simple ajax request for other part as soon as it they need. 
-
 
 ### Code Generators
 
@@ -78,15 +69,6 @@ AWS_ACCESS_KEY_ID=[yours] AWS_SECRET_ACCESS_KEY=[yours] ember deploy production 
 you are able to to deploy to S3 in Production environment. All build, revision, Gzip and other pipeline for deployment 
 has been done and will be deploy automatically. ENJOY!
 
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
-
 ## CORS issue
 Answer from BreweryDB:
 
@@ -104,3 +86,21 @@ endpoints:
   GET - https://2wb03ukih6.execute-api.us-west-1.amazonaws.com/v2/beers/{id}/ingredients
   GET - https://2wb03ukih6.execute-api.us-west-1.amazonaws.com/v2/beers
 ```
+
+## TODO
+
+**RESTSerializer**
+
+The serializer in Ember for Beers only is done which is I need to complete and demonstrate this project.
+However, I still need to work on `hasMany` and `belongsTo` for other models. 
+Although I have partially done that, still need refinement until 100% ready. 
+For now, I will finish project with simple ajax request for other part as soon as it they need. 
+
+## Further Reading / Useful Links
+
+* [ember.js](http://emberjs.com/)
+* [ember-cli](https://ember-cli.com/)
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
