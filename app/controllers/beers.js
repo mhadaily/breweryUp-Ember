@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
     next(){
       this.set('isLoading', true);
       let page = this.get('page');
-      let newPage = parseInt(page + 1);
+      let newPage = parseInt(Number(page) + 1);
       this.set('page', newPage);
       setTimeout(() => {
         this.set('isLoading', false);
