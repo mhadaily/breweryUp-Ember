@@ -15,6 +15,8 @@ Router.map(function () {
     this.route('ingredients', {path: 'beers/:beer_id/ingredients'});
   });
 
+  this.route('about');
+  this.route('contact');
 });
 
 export default Router;

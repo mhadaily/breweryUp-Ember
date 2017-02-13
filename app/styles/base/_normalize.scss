@@ -483,5 +483,17 @@ h6 {
 p {
   font-size: 1.125rem;
   font-weight: $font-weight-regular;
-  line-height: 1.8;
+}
+
+
+//CLEARFIX FLOAT
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
