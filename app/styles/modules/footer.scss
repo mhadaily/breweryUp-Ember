@@ -1,0 +1,10 @@
+.footer {
+  padding: 2em;
+  background-color: #000;
+  a {
+    text-decoration: none;
+    &:hover {
+      color: $yellowish;
+    }
+  }
+}
