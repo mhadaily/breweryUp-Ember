@@ -5,12 +5,14 @@
       <div class="text__align-center search">
         <h4>Which page you like to check? we have {{total_pages}} pages:</h4>
         <a {{action 'prev'}} class="button__general button__general-style2">PREVIOUS</a>
-        {{input type="text" value=page id="pageNumber" action="updateValue" on="key-press" class="search__input text_align-center"
+        {{input type="text" value=page id="pageNumber" action="updateValue" on="key-press"
+                class="search__input text_align-center"
                 placeholder="Current Page" disabled=entryNotAllowed}}
         <a {{action 'next'}} class="button__general button__general-style2">NEXT</a>
       </div>
       <div class="space__height-10"></div>
-      {{#if model.loading}}
+      {{log model}}
+      {{#if isLoading}}
         <div class="text__align-center">
           <div class="space__height-10"></div>
           {{loading-spinner}}
@@ -32,9 +34,9 @@
                   <div class="back beerbox__footer">
                     <div class="text__align-center">
                       <p class="font__color-white">abv: {{beer.abv}}<br>
-                      Serving: {{beer.servingTemperature}}<br>
-                      Organic: {{beer.isOrganic}}<br>
-                      status: {{beer.status}}<br>
+                        Serving: {{beer.servingTemperature}}<br>
+                        Organic: {{beer.isOrganic}}<br>
+                        status: {{beer.status}}<br>
                       </p>
 
                       {{#link-to "beer" beer}}

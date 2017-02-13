@@ -33,9 +33,9 @@
   <div class="col-12">
     <div class="beer-portfolio clearfix">
       <div class="row">
-        <div class="col-9">
+        <div class="col-8">
           <div class="beer-portfolio__details clearfix">
-            <div class="col-6 beer-portfolio__details-detail">
+            <div class="beer-portfolio__details-detail">
               <p><strong>ID</strong>:  {{model.id}}</p>
               <p><strong>ABV</strong>:  {{model.abv}}</p>
               <p><strong>IBU</strong>:  {{model.ibu}}</p>
@@ -45,47 +45,51 @@
               <p><strong>SRM</strong>:  {{model.srm.name}}</p>
               <p><strong>AVAILABLE</strong>:  {{model.available.name}}</p>
             </div>
-            <div class="col-5 beer-portfolio__details-description">
-              {{model.description}}
-            </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-4">
           <div class="beer-portfolio__thumbnail">
             <img src="/assets/img/norwaybeer.jpg" class="img__responsive">
           </div>
         </div>
       </div>
+      {{#if model.description}}
+        <div class="row">
+          <div class="col-5 beer-portfolio__details-description">
+            {{model.description}}
+          </div>
+        </div>
+      {{/if}}
     </div>
   </div>
 
   <div class="row">
     <div class="col-12 clearfix">
       <h3>STYLE</h3>
-      <div class="col-4">
-        <div class="beer-portfolio__details clearfix">
-          <p><strong>category: </strong>{{model.style.category.name}}</p>
-          <p><strong>name:</strong> {{model.style.name}}</p>
-          <p><strong>shortName:</strong> {{model.style.shortName}}</p>
-          <p><strong> ibuMin:</strong> {{model.style.ibuMin}}</p>
-          <p><strong> ibuMax:</strong> {{model.style.ibuMax}}</p>
-          <p><strong>abvMin:</strong> {{model.style.abvMin}}</p>
+      <div class="clearfix">
+        <div class="col-8">
+          <div class="beer-portfolio__details">
+            <p><strong>category: </strong>{{model.style.category.name}}</p>
+            <p><strong>name:</strong> {{model.style.name}}</p>
+            <p><strong>shortName:</strong> {{model.style.shortName}}</p>
+            <p><strong> ibuMin:</strong> {{model.style.ibuMin}}</p>
+            <p><strong> ibuMax:</strong> {{model.style.ibuMax}}</p>
+            <p><strong>abvMin:</strong> {{model.style.abvMin}}</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="beer-portfolio__details">
+            <p><strong> abvMax:</strong> {{model.style.abvMax}}</p>
+            <p><strong> srmMin:</strong> {{model.style.srmMin}}</p>
+            <p><strong> srmMax:</strong> {{model.style.srmMax}}</p>
+            <p><strong> ogMin:</strong> {{model.style.ogMin}}</p>
+            <p><strong> fgMin:</strong> {{model.style.fgMin}}</p>
+            <p><strong> fgMax:</strong> {{model.style.fgMax}}</p>
+          </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="beer-portfolio__details clearfix">
-          <p><strong> abvMax:</strong> {{model.style.abvMax}}</p>
-          <p><strong> srmMin:</strong> {{model.style.srmMin}}</p>
-          <p><strong> srmMax:</strong> {{model.style.srmMax}}</p>
-          <p><strong> ogMin:</strong> {{model.style.ogMin}}</p>
-          <p><strong> fgMin:</strong> {{model.style.fgMin}}</p>
-          <p><strong> fgMax:</strong> {{model.style.fgMax}}</p>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="beer-portfolio__details-description">
-          <p><strong>description:</strong> {{model.style.description}}</p>
-        </div>
+      <div class="beer-portfolio__details-description clearfix">
+        <p><strong>description:</strong> {{model.style.description}}</p>
       </div>
     </div>
   </div>
