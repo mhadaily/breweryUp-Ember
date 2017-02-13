@@ -1,7 +1,7 @@
 # brewery-up-ember
 
 This is a single page application based on brewerydb.com api. 
-More details will be provided soon. 
+More details will be provided soon. [READL DEMO ON AMAZON S3](http://brewery-up-ember.s3-website-eu-west-1.amazonaws.com/)
 
 ## Docker
 
@@ -64,7 +64,19 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+This application has 3 environment for deployment
+
+1- Development
+2- Staging
+3- Production 
+
+simply run the following command:
+
+```commandline
+AWS_ACCESS_KEY_ID=[yours] AWS_SECRET_ACCESS_KEY=[yours] ember deploy production --activate=true
+```
+you are able to to deploy to S3 in Production environment. All build, revision, Gzip and other pipeline for deployment 
+has been done and will be deploy automatically. ENJOY!
 
 ## Further Reading / Useful Links
 
