@@ -1,7 +1,7 @@
 # brewery-up-ember
 
 This is a single page application based on brewerydb.com api. 
-More details will be provided soon. [READL DEMO ON AMAZON S3](http://brewery-up-ember.s3-website-eu-west-1.amazonaws.com/)
+ [LIVE DEMO ON AMAZON S3](http://brewery-up-ember.s3-website-eu-west-1.amazonaws.com/)
 
 ##### Note: Please review MySolution section down below. and check out the server repository. 
 
@@ -57,17 +57,17 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 This application has 3 environment for deployment
 
-1- Development
-2- Staging
-3- Production 
+1. Development
+2. Staging
+3. Production 
 
 simply run the following command:
 
 ```commandline
 AWS_ACCESS_KEY_ID=[yours] AWS_SECRET_ACCESS_KEY=[yours] ember deploy production --activate=true
 ```
-you are able to to deploy to S3 in Production environment. All build, revision, Gzip and other pipeline for deployment 
-has been done and will be deploy automatically. ENJOY!
+you are able to deploy to S3 in Production environment. All build, revision, Gzip and other pipeline for deployment 
+has been done and will be deployed automatically. ENJOY!
 
 ## CORS issue
 Answer from BreweryDB:
@@ -91,7 +91,7 @@ endpoints:
 
 **RESTSerializer**
 
-The serializer in Ember for Beers only is done which is I need to complete and demonstrate this project.
+The serializer in Ember for Beers is only done which is I need to complete and demonstrate this project.
 However, I still need to work on `hasMany` and `belongsTo` for other models. 
 Although I have partially done that, still need refinement until 100% ready. 
 For now, I will finish project with simple ajax request for other part as soon as it they need. 
