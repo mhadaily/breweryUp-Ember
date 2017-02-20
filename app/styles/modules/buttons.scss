@@ -42,11 +42,10 @@
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
     }
     &:hover {
-      color: $yellowish;
+      color: #000;
       &:after {
         height: 260%;
         opacity: 1;
-        z-index: 0;
       }
     }
     &:active {
