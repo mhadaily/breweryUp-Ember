@@ -5,7 +5,7 @@
       <div class="text__align-center search">
         <h4>Which page you like to check? we have {{total_pages}} pages:</h4>
         <a {{action 'prev'}} class="button__general button__general-style2">PREVIOUS</a>
-        {{input type="text" value=page id="pageNumber" action="updateValue" on="key-press"
+        {{input type="text" value=page id="pageNumber" key-press="updateValue"
                 class="search__input text_align-center"
                 placeholder="Current Page" disabled=entryNotAllowed}}
         <a {{action 'next'}} class="button__general button__general-style2">NEXT</a>
