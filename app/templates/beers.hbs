@@ -11,13 +11,7 @@
         <a {{action 'next'}} class="button__general button__general-style2">NEXT</a>
       </div>
       <div class="space__height-10"></div>
-      {{log model}}
-      {{#if isLoading}}
-        <div class="text__align-center">
-          <div class="space__height-10"></div>
-          {{loading-spinner}}
-        </div>
-      {{else}}
+      {{#if model.isLoaded}}
         {{#each model as |beer|}}
           <div class="col-4">
             <div class="beerbox">
@@ -42,7 +36,6 @@
                       {{#link-to "beer" beer}}
                         SEE DETAILS
                       {{/link-to}}
-
                     </div>
                   </div>
                 </div>
@@ -50,6 +43,11 @@
             </div>
           </div>
         {{/each}}
+      {{else}}
+        <div class="text__align-center">
+          <div class="space__height-10"></div>
+          {{loading-spinner}}
+        </div>
       {{/if}}
       {{outlet}}
       <div class="space__height-10"></div>
